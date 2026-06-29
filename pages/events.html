@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events — TUP MTI Alumni</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">⚙</span>
+      <span class="nav-title">TUP MTI ALUMNI</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="committees.html">Committees</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li class="dropdown">
+        <a href="business.html">Business Directory ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="business-manufacturing.html">Manufacturing</a></li>
+          <li><a href="business-technology.html">Technology</a></li>
+          <li><a href="business-food.html">Food & Beverages</a></li>
+          <li><a href="business-realestate.html">Real Estate</a></li>
+          <li><a href="business-construction.html">Construction</a></li>
+          <li><a href="business-healthcare.html">Healthcare</a></li>
+          <li><a href="business-finance.html">Finance</a></li>
+          <li><a href="business-service.html">Service</a></li>
+          <li><a href="business-retail.html">Retail</a></li>
+        </ul>
+      </li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- PAGE HERO with slideshow of event photos -->
+  <div class="page-hero" style="margin-top:60px; height: 320px;">
+    <div class="page-hero-bg" style="background-image: url('../images/homecoming_1.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1>Events</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › Events</div>
+
+      <!-- MAIN EVENT SLIDESHOW -->
+      <div class="slideshow-wrap" data-slideshow="eventsSlide" style="margin-bottom: 16px;">
+        <div class="slides-track">
+
+          <div class="slide-item">
+            <img src="../images/homecoming_1.jpg" alt="Homecoming Event"/>
+            <div class="slide-caption">Alumni Homecoming</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/homecoming_2.jpg" alt="Homecoming Event 2"/>
+            <div class="slide-caption">Alumni Homecoming</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/homecoming_e.jpg" alt="Homecoming Event Hall"/>
+            <div class="slide-caption">Alumni Homecoming — Event Hall</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/event_hall.png" alt="Event Hall Setup"/>
+            <div class="slide-caption">Alumni Event Hall Setup</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/sportfest_2.jpg" alt="Sportsfest"/>
+            <div class="slide-caption">Alumni Sportsfest</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/event_badminton.png" alt="Badminton Tournament"/>
+            <div class="slide-caption">Alumni Badminton Tournament</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/event_volleyball_opening.png" alt="Volleyball Opening Ceremony"/>
+            <div class="slide-caption">Alumni Volleyball — Opening Ceremony</div>
+          </div>
+
+
+          <div class="slide-item">
+            <img src="../images/event_moto_night1.png" alt="Motorcycle Night Ride"/>
+            <div class="slide-caption">Alumni Motorcycle Night Ride</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/event_moto_night2.png" alt="Motorcycle Night Ride 2"/>
+            <div class="slide-caption">Alumni Motorcycle Night Ride — TUP Pylon</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/event_registration.png" alt="Alumni Registration"/>
+            <div class="slide-caption">Alumni Registration & Membership Drive</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/event_group_selfie.png" alt="Group Selfie"/>
+            <div class="slide-caption">Alumni Gathering — PETMALU &amp; OWKEY!</div>
+          </div>
+
+          <div class="slide-item">
+            <img src="../images/golf_club.jpg" alt="1st MTI-TUP Taguig Alumni Golf Tour"/>
+            <div class="slide-caption">1st MTI-TUP Taguig Alumni Golf Tour — South Forbes Golf Club, Silang Cavite · May 27, 2023 #ONETUP</div>
+          </div>
+
+        </div>
+        <button class="slide-prev">‹</button>
+        <button class="slide-next">›</button>
+        <div class="slide-dots"></div>
+      </div>
+
+      
+      <!-- EVENT CARDS -->
+      <div class="section-header">
+        <h2>Past Events</h2>
+        <p>Moments and milestones from the MTI alumni community</p>
+      </div>
+
+      <div class="event-grid">
+
+        <div class="event-card">
+          <img src="../images/homecoming_1.jpg" alt="Homecoming" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Homecoming</span>
+            <h3>Alumni Homecoming</h3>
+            <p>A night of reconnection and celebration for all MTI alumni.</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../images/event_hall.png" alt="Event Hall" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Homecoming</span>
+            <h3>Alumni Event Hall</h3>
+            <p>A beautifully decorated venue bringing together alumni from all batches for a night to remember.</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../images/event_badminton.png" alt="Badminton Tournament" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Sports</span>
+            <h3>Alumni Badminton Tournament</h3>
+            <p>MTI alumni competed on the badminton court, showcasing sportsmanship and keeping the competitive spirit alive.</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../images/event_volleyball_opening.png" alt="Volleyball Opening" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Sports</span>
+            <h3>Alumni Volleyball — Opening Ceremony</h3>
+            <p>Teams lined up and ready as the alumni volleyball tournament officially kicked off.</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../images/event_moto_night1.png" alt="Motorcycle Night Ride" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Leisure</span>
+            <h3>Alumni Motorcycle Night Ride</h3>
+            <p>Alumni riders gathered for a festive night ride, cruising together in true brotherhood under the stars.</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../images/event_moto_night2.png" alt="Motorcycle Night Ride — TUP Pylon" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Leisure</span>
+            <h3>Night Ride — TUP Pylon Meetup</h3>
+            <p>Riders assembled at the iconic TUP Pylon — where every journey home begins.</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../images/event_registration.png" alt="Alumni Registration" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Membership</span>
+            <h3>Alumni Registration & Membership Drive</h3>
+            <p>New and returning alumni registering for the association — growing the community one member at a time.</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../images/event_group_selfie.png" alt="Group Selfie" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Fellowship</span>
+            <h3>Alumni Gathering — PETMALU &amp; OWKEY!</h3>
+            <p>Good vibes, great company — this is what the TUP MTI alumni brotherhood looks like.</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../images/sportfest_2.jpg" alt="Sportsfest" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Sports</span>
+            <h3>Alumni Sportsfest</h3>
+            <p>Friendly competition and camaraderie among alumni through sports.</p>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../images/golf_club.jpg" alt="Golf Tour" class="event-img"/>
+          <div class="event-body">
+            <span class="event-badge">Golf</span>
+            <h3>1st MTI-TUP Taguig Alumni Golf Tour</h3>
+            <p>First ever alumni golf tournament held at South Forbes Golf Club, Silang Cavite. #ONETUP</p>
+            <p class="event-date">Saturday, May 27, 2023</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">TUP MTI Alumni Association</p>
+        <p>cesar.mendoza@tup.edu.ph</p>
+        <p>mtituptaa@gmail.com</p>
+      </div>
+      <div>
+        <p><a href="../index.html">Home</a> · <a href="committees.html">Committees</a> · <a href="events.html">Events</a></p>
+        <p style="margin-top:8px"><a href="https://www.facebook.com/groups/686161153876658" target="_blank">Join Official FB Group</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

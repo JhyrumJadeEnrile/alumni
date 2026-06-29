@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects — TUP MTI Alumni</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .donation-banner {
+      background: linear-gradient(135deg, #8B0000 0%, #b30000 60%, #cc0000 100%);
+      color: #fff;
+      border-radius: 12px;
+      padding: 48px 40px;
+      margin: 40px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .donation-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .donation-banner h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 0 12px;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    .donation-banner .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.92;
+      margin: 0 0 28px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    .donation-amount-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .donation-amount-btn {
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.5);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .donation-amount-btn:hover, .donation-amount-btn.selected {
+      background: #fff;
+      color: #8B0000;
+      border-color: #fff;
+    }
+    .donate-cta {
+      display: inline-block;
+      background: #FFD700;
+      color: #8B0000;
+      font-weight: 800;
+      font-size: 1.1rem;
+      padding: 14px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .donate-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+    }
+    .donation-trust {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .donation-trust span::before { content: '✓ '; }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .impact-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .impact-card .impact-icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .impact-card .impact-number { font-size: 1.8rem; font-weight: 800; color: #8B0000; }
+    .impact-card .impact-label { font-size: 0.9rem; color: #666; margin-top: 4px; }
+    .progress-wrap { margin: 32px 0; }
+    .progress-label { display: flex; justify-content: space-between; font-size: 0.95rem; font-weight: 600; margin-bottom: 8px; color: #333; }
+    .progress-bar { background: #f0f0f0; border-radius: 99px; height: 16px; overflow: hidden; }
+    .progress-fill { background: linear-gradient(90deg, #8B0000, #cc0000); height: 100%; border-radius: 99px; width: 8.56%; transition: width 1.2s ease; }
+    .quote-block {
+      background: #fdf7f7;
+      border-left: 4px solid #8B0000;
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+      font-style: italic;
+      color: #444;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .quote-block cite { display: block; margin-top: 10px; font-style: normal; font-weight: 700; color: #8B0000; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><span class="nav-logo">⚙</span><span class="nav-title">TUP MTI ALUMNI</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li><li><a href="committees.html">Committees</a></li><li><a href="events.html">Events</a></li>
+      <li class="dropdown"><a href="business.html">Business Directory ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="business-manufacturing.html">Manufacturing</a></li><li><a href="business-technology.html">Technology</a></li>
+          <li><a href="business-food.html">Food & Beverages</a></li><li><a href="business-realestate.html">Real Estate</a></li>
+          <li><a href="business-construction.html">Construction</a></li><li><a href="business-healthcare.html">Healthcare</a></li>
+          <li><a href="business-finance.html">Finance</a></li><li><a href="business-service.html">Service</a></li><li><a href="business-retail.html">Retail</a></li>
+        </ul>
+      </li><li><a href="projects.html" class="active">Projects</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <div class="page-hero" style="margin-top:60px; height:320px;">
+    <div class="page-hero-bg" style="background-image:url('../images/project_1.jpg');background-size:cover;background-position:center;"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><h1>Projects</h1></div>
+  </div>
+
+  <section class="section"><div class="container">
+    <div class="breadcrumb"><a href="../index.html">Home</a> › Projects</div>
+
+    <div class="section-header">
+      <h2>Alumni Projects</h2>
+      <p>Initiatives and undertakings of the TUP MTI Alumni Association — built by alumni, for alumni, and for the generations that follow.</p>
+    </div>
+
+    <!-- PROJECTS SLIDESHOW -->
+    <div class="slideshow-wrap" data-slideshow="projSlide" style="margin-bottom:16px;">
+      <div class="slides-track">
+        <div class="slide-item">
+          <img src="../images/project_1.jpg" alt="Bahay ng Alumni — Project Render"/>
+          <div class="slide-caption">Bahay ng Alumni — Architectural Render</div>
+        </div>
+      </div>
+      <button class="slide-prev">‹</button><button class="slide-next">›</button>
+      <div class="slide-dots"></div>
+    </div>
+    <div class="thumb-grid" style="margin-bottom:32px;">
+      <div class="thumb-item active" data-for="projSlide"><img src="../images/project_1.jpg" alt="Project 1"/></div>
+    </div>
+
+    <!-- PROJECT CARD -->
+    <div class="committee-list" style="margin-bottom: 16px;">
+      <div class="committee-card">
+        <h3>🏛 Bahay ng Alumni</h3>
+        <p class="obj">A dedicated alumni center on campus — a permanent space for alumni gatherings, meetings, mentorship, and memories.</p>
+        <ul>
+          <li>Multi-story facility with modern architecture designed for multipurpose use.</li>
+          <li>Designed to serve as the permanent home of the MTI Alumni Association.</li>
+          <li>Will house meeting rooms, event spaces, a legacy exhibit, and alumni services.</li>
+          <li>A living monument to every graduate who walked through TUP-Taguig's gates.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FUNDRAISING PROGRESS -->
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span>Fundraising Progress — As of June 8, 2026</span>
+        <span>8.56% — Target: ₱2,000,000</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <p style="font-size:0.85rem; color:#888; margin-top:6px;">Every peso gets us closer to breaking ground.</p>
+    </div>
+
+    <!-- DONATION TRACKER SCREENSHOT -->
+    <div style="margin: 32px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
+      <img src="../images/donation_tracker.png" alt="Donation Tracker — Live Status as of June 8, 2026" style="width:100%; display:block; height:auto;"/>
+    </div>
+
+    <!-- LIVE STATS CARDS -->
+    <div class="impact-grid" style="margin: 8px 0 40px;">
+      <div class="impact-card" style="border-top: 4px solid #8B0000;">
+        <div class="impact-icon">💰</div>
+        <div class="impact-number">₱171,285</div>
+        <div class="impact-label">Total collected as of June 8, 2026</div>
+      </div>
+      <div class="impact-card" style="border-top: 4px solid #cc0000;">
+        <div class="impact-icon">🎯</div>
+        <div class="impact-number">₱1,828,715</div>
+        <div class="impact-label">Still needed to reach the target</div>
+      </div>
+      <div class="impact-card" style="border-top: 4px solid #FFD700;">
+        <div class="impact-icon">🤝</div>
+        <div class="impact-number">50</div>
+        <div class="impact-label">Alumni who have donated</div>
+      </div>
+      <div class="impact-card" style="border-top: 4px solid #555;">
+        <div class="impact-icon">📨</div>
+        <div class="impact-number">2,525</div>
+        <div class="impact-label">Alumni sent solicitation letters</div>
+      </div>
+    </div>
+
+    <!-- QUOTE -->
+    <div class="quote-block">
+      "TUP shaped who we are — our discipline, our craft, our drive. The Bahay ng Alumni is our chance to give back something lasting — a home where every batch, past and future, can always return to."
+      <cite>— TUP MTI Alumni Leadership</cite>
+    </div>
+
+    <!-- MAIN DONATION BANNER -->
+    <div class="donation-banner">
+      <h2>🏗 Help Build the Bahay ng Alumni</h2>
+      <p class="subtitle">
+        This is more than a building. It's a testament to what MTI graduates have become — and a promise to the engineers, technicians, and innovators still finding their way. Your donation funds a place where alumni can connect, mentor, and thrive for decades to come.
+      </p>
+
+      <p style="font-weight: 700; font-size: 1rem; margin-bottom: 14px; opacity: 0.9;">Choose a donation amount:</p>
+      <div class="donation-amount-row">
+        <button class="donation-amount-btn" onclick="selectAmount(this)">₱500</button>
+        <button class="donation-amount-btn" onclick="selectAmount(this)">₱1,000</button>
+        <button class="donation-amount-btn" onclick="selectAmount(this)">₱2,500</button>
+        <button class="donation-amount-btn" onclick="selectAmount(this)">₱5,000</button>
+        <button class="donation-amount-btn" onclick="selectAmount(this)">₱10,000+</button>
+      </div>
+
+      <a href="https://www.facebook.com/groups/686161153876658" target="_blank" class="donate-cta">
+        💛 Donate Now — Message Us on Facebook
+      </a>
+
+      <div class="donation-trust">
+        <span>Transparent fund management</span>
+        <span>Official alumni association</span>
+        <span>Every centavo goes to the project</span>
+      </div>
+    </div>
+
+    <!-- SECONDARY CALL TO ACTION -->
+    <div style="background: #f9f9f9; border-radius: 10px; padding: 32px; text-align: center; margin-top: 16px;">
+      <h3 style="margin: 0 0 10px; font-size: 1.3rem;">Can't donate right now?</h3>
+      <p style="color: #555; margin: 0 0 20px;">You can still help. Share this project with fellow alumni, join the community, and spread the word. Every new member strengthens the cause.</p>
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://www.facebook.com/groups/686161153876658" target="_blank" class="btn btn-primary">Join the FB Community</a>
+        <a href="https://www.facebook.com/tuptmtialumni" target="_blank" class="btn btn-outline">Follow Our Page</a>
+      </div>
+    </div>
+
+  </div></section>
+
+  <footer class="footer"><div class="container footer-inner">
+    <div><p class="footer-brand">TUP MTI Alumni Association</p><p>cesar.mendoza@tup.edu.ph · mtituptaa@gmail.com</p></div>
+    <div><p><a href="../index.html">Home</a> · <a href="projects.html">Projects</a></p><p style="margin-top:8px"><a href="https://www.facebook.com/groups/686161153876658" target="_blank">Join Official FB Group</a></p></div>
+  </div></footer>
+  <script src="../js/main.js"></script>
+  <script>
+    function selectAmount(btn) {
+      document.querySelectorAll('.donation-amount-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    }
+    // Animate progress bar on scroll
+    const fill = document.getElementById('progressFill');
+    if (fill) {
+      const obs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) { fill.style.width = '8.56%'; obs.disconnect(); }
+      });
+      obs.observe(fill);
+    }
+  </script>
+</body>
+</html>

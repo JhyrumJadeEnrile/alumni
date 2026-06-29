@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TUP MTI Alumni Association</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* SERVICES SECTION */
+    .services-section {
+      background: #f5f5f5;
+      padding: 72px 0;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+    }
+    .service-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+    }
+    .service-card-body {
+      padding: 22px 20px;
+    }
+    .service-card-badge {
+      display: inline-block;
+      background: #8B0000;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .service-card-body h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: #1a1a1a;
+    }
+    .service-card-body p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+      margin: 0 0 14px;
+    }
+    .service-link {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #8B0000;
+      text-decoration: none;
+    }
+    .service-link:hover { text-decoration: underline; }
+    /* ALUMNI ID PROMO */
+    .alumni-id-section {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 72px 0;
+    }
+    .alumni-id-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    @media (max-width: 700px) {
+      .alumni-id-inner { grid-template-columns: 1fr; }
+    }
+    .alumni-id-img {
+      border-radius: 12px;
+      width: 100%;
+      height: auto;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .alumni-id-content h2 { font-size: 1.8rem; font-weight: 800; color: #FFD700; margin: 0 0 14px; }
+    .alumni-id-content p { color: #ccc; line-height: 1.7; margin: 0 0 20px; }
+    .alumni-id-perks { list-style: none; padding: 0; margin: 0 0 28px; }
+    .alumni-id-perks li { color: #ddd; padding: 6px 0; font-size: 0.95rem; }
+    .alumni-id-perks li::before { content: '✦ '; color: #FFD700; font-size: 0.8rem; }
+    /* CAMPUS TOUR BANNER */
+    .campus-tour-banner {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      margin: 48px 0;
+    }
+    .campus-tour-banner img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .campus-tour-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(139,0,0,0.88) 0%, rgba(0,0,0,0.4) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 48px;
+    }
+    .campus-tour-overlay h2 { color: #FFD700; font-size: 1.6rem; font-weight: 800; margin: 0 0 10px; max-width: 420px; }
+    .campus-tour-overlay p { color: rgba(255,255,255,0.9); font-size: 1rem; max-width: 380px; line-height: 1.6; margin: 0 0 24px; }
+    @media(max-width:600px) {
+      .campus-tour-overlay { padding: 24px; }
+      .campus-tour-overlay h2 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">⚙</span>
+      <span class="nav-title">TUP MTI ALUMNI</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="pages/committees.html">Committees</a></li>
+      <li><a href="pages/events.html">Events</a></li>
+      <li class="dropdown">
+        <a href="pages/business.html">Business Directory ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="pages/business-manufacturing.html">Manufacturing</a></li>
+          <li><a href="pages/business-technology.html">Technology</a></li>
+          <li><a href="pages/business-food.html">Food & Beverages</a></li>
+          <li><a href="pages/business-realestate.html">Real Estate</a></li>
+          <li><a href="pages/business-construction.html">Construction</a></li>
+          <li><a href="pages/business-healthcare.html">Healthcare</a></li>
+          <li><a href="pages/business-finance.html">Finance</a></li>
+          <li><a href="pages/business-service.html">Service</a></li>
+          <li><a href="pages/business-retail.html">Retail</a></li>
+        </ul>
+      </li>
+      <li><a href="pages/projects.html">Projects</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-slideshow">
+      <div class="hero-slide active" style="background-image: url('images/homecoming_1.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/homecoming_2.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/event_hall.png');"></div>
+      <div class="hero-slide" style="background-image: url('images/sportfest_2.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/golf_club.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/event_volleyball_opening.png');"></div>
+      <div class="hero-slide" style="background-image: url('images/event_moto_night2.png');"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">#ONETUP</p>
+      <h1 class="hero-title">TUP MTI Alumni<br/>Association</h1>
+      <p class="hero-sub">Connecting graduates. Building community. Moving forward together.</p>
+      <div class="hero-btns">
+        <a href="pages/events.html" class="btn btn-primary">Our Events</a>
+        <a href="pages/business.html" class="btn btn-outline">Business Directory</a>
+      </div>
+    </div>
+    <div class="hero-dots" id="heroDots"></div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What We Offer</h2>
+        <p>The TUP MTI Alumni Association provides a range of services and benefits that keep our graduates connected, supported, and growing — long after graduation day.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <img src="images/promo_alumni_shirt.png" alt="Alumni ID — Unlock New Opportunities"/>
+          <div class="service-card-body">
+            <span class="service-card-badge">Membership</span>
+            <h3>Alumni ID & Membership Benefits</h3>
+            <p>Get your official Alumni ID and unlock priority access to campus facilities, exclusive merchandise discounts, special rates for the gymnasium and event venues, and complimentary entry to alumni events.</p>
+            <a href="https://www.facebook.com/tuptmtialumni" target="_blank" class="service-link">Get Your Alumni ID →</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="images/promo_campus_tour.png" alt="Your Alma Mater, Your Market Partner"/>
+          <div class="service-card-body">
+            <span class="service-card-badge">Business</span>
+            <h3>Alumni Entrepreneur Marketplace</h3>
+            <p>Are you a TUP-T graduate and business owner? Bring your brand home. We connect alumni entrepreneurs with the community to expand your market reach and grow your customer base together.</p>
+            <a href="https://www.facebook.com/share/g/17pOX6aWBQ/" target="_blank" class="service-link">Join the Marketplace →</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="images/promo_alumni_id.png" alt="TUPT-MTI Alumni Campus Tour"/>
+          <div class="service-card-body">
+            <span class="service-card-badge">Campus</span>
+            <h3>Alumni Campus Tour</h3>
+            <p>"Let's walk the halls that built our dreams." Book a guided campus tour every Tuesday and Thursday morning. Wear red and white, show off your alumni T-shirt, and relive where it all began.</p>
+            <a href="tel:09433875620" class="service-link">Book: 0943 387 5620 →</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="images/committees_doc.png" alt="Alumni Shirt for Sale"/>
+          <div class="service-card-body">
+            <span class="service-card-badge">Merchandise</span>
+            <h3>Official Alumni T-Shirt</h3>
+            <p>Wear your identity with pride. The official TUP MTI Alumni polo shirt is available in multiple sizes. Slim-fit design in red and white. Order now and support the association.</p>
+            <a href="https://www.facebook.com/tuptmtialumni" target="_blank" class="service-link">Order Now — ₱850 →</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="images/event_registration.png" alt="Alumni Registration Drive"/>
+          <div class="service-card-body">
+            <span class="service-card-badge">Community</span>
+            <h3>Membership Registration</h3>
+            <p>Not yet a registered member? Join the association and be part of a thriving community of MTI and TUP-Taguig graduates. Registration is open to all batches — it's never too late to come home.</p>
+            <a href="https://www.facebook.com/tuptmtialumni" target="_blank" class="service-link">Register Now →</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="images/project_1.jpg" alt="Bahay ng Alumni Project"/>
+          <div class="service-card-body">
+            <span class="service-card-badge">Project</span>
+            <h3>Support the Bahay ng Alumni</h3>
+            <p>Our flagship project — a permanent alumni center on the TUP-Taguig campus. A space for gatherings, mentorship, and memories for generations of graduates. Your donation builds the future.</p>
+            <a href="pages/projects.html" class="service-link">Donate to the Project →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CAMPUS TOUR BANNER -->
+      <div class="campus-tour-banner">
+        <img src="images/promo_alumni_id.png" alt="Alumni Campus Tour"/>
+        <div class="campus-tour-overlay">
+          <h2>"Let's Walk the Halls That Built Our Dreams."</h2>
+          <p>Every Tuesday and Thursday morning, alumni are invited back to TUP-Taguig for a guided campus tour. Relive the spaces that shaped who you are today.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="tel:09433875620" class="btn btn-primary">📞 Book: 0943 387 5620</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ALUMNI ID SECTION -->
+  <section class="alumni-id-section">
+    <div class="container">
+      <div class="alumni-id-inner">
+        <img src="images/promo_alumni_shirt.png" alt="Alumni ID Perks" class="alumni-id-img"/>
+        <div class="alumni-id-content">
+          <h2>Unlock New Opportunities with Your Alumni ID</h2>
+          <p>Your TUP MTI Alumni ID is more than just a card — it's your key to a lifetime of benefits, connections, and community. Get yours today and start enjoying exclusive perks.</p>
+          <ul class="alumni-id-perks">
+            <li>Priority access to university campus facilities</li>
+            <li>Exclusive discounts on official merchandise and apparel</li>
+            <li>Special rates for gymnasium, event venues, and research labs</li>
+            <li>Complimentary or discounted entry to alumni events</li>
+            <li>Comprehensive incentives and benefits — more to be announced</li>
+          </ul>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://www.facebook.com/tuptmtialumni" target="_blank" class="btn btn-primary">Get Your Alumni ID</a>
+            <a href="tel:09433856270" class="btn btn-outline" style="color:#FFD700; border-color:#FFD700;">📞 0943 385 627</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">TUP MTI Alumni Association</p>
+        <p>cesar.mendoza@tup.edu.ph</p>
+        <p>mtituptaa@gmail.com</p>
+      </div>
+      <div>
+        <p><a href="index.html">Home</a> · <a href="pages/committees.html">Committees</a> · <a href="pages/events.html">Events</a></p>
+        <p style="margin-top:8px"><a href="https://www.facebook.com/groups/686161153876658" target="_blank">Join Official FB Group</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
